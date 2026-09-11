@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#11080f">
+  <meta name="description" content="LA CALABAZA — three kittens, one beat, zero explanation. A meme project dancing on BNB Chain.">
+  <title>LA CALABAZA — Born to Dance on BNB Chain</title>
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="shortcut icon" href="./favicon.ico">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./runtime-config.js"></script>
+  <script type="module" src="./public-config.mjs"></script>
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="page-noise" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="LA CALABAZA home">
+      <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true">
+        <path d="M10 19 17 9l7 8 7-8 7 10v14c0 5-6 9-14 9S10 38 10 33V19Z"/>
+        <path d="M16 25h5M27 25h5M21 33c2 2 4 2 6 0"/>
+      </svg>
+      <span>LA CALABAZA</span>
+    </a>
+
+    <nav class="primary-nav" aria-label="Primary navigation">
+      <a href="#trend">The trend</a>
+      <a href="#cats">The cats</a>
+      <a href="#how-to-buy">How to buy</a>
+      <a href="#memes">Memes</a>
+    </nav>
+
+    <button class="mobile-nav-toggle" id="mobile-nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav">
+      Menu
+    </button>
+
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+      <a href="#trend">The trend</a>
+      <a href="#cats">The cats</a>
+      <a href="#how-to-buy">How to buy</a>
+      <a href="#memes">Memes</a>
+      <a class="mobile-launch-link pending-action" data-link="buy" data-pending="true" aria-disabled="true" data-pending-message="The official buy link will appear after launch details are verified.">Buy $CALABAZA ↗</a>
+      <a class="mobile-launch-link pending-action" data-link="x" data-pending="true" aria-disabled="true" data-pending-message="The official X profile is coming soon.">X ↗</a>
+    </nav>
+
+    <div class="header-actions">
+      <a class="header-buy pending-action" data-link="buy" data-pending="true" aria-disabled="true" data-pending-message="The official buy link will appear after launch details are verified.">
+        Buy $CALABAZA <span aria-hidden="true">↗</span>
+      </a>
+      <a class="header-x pending-action" data-link="x" data-pending="true" aria-disabled="true" data-pending-message="The official X profile is coming soon." aria-label="Open LA CALABAZA on X">X ↗</a>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="hero-stage">
+        <img class="hero-art" src="./assets/hero-kittens.png" width="1672" height="940" alt="Three LA CALABAZA kittens dancing together, with one wearing a black hat and another wearing round glasses">
+        <img class="hero-video-background" src="./assets/hero-background.png" width="1672" height="940" alt="" aria-hidden="true">
+        <video class="hero-dance-video" id="hero-dance-video" src="./assets/hero-dance-alpha.webm" poster="./assets/hero-dance-poster.png" width="1672" height="940" loop playsinline preload="metadata" data-video-state="ready" aria-hidden="true" aria-label="LA CALABAZA transparent kitten dance video"></video>
+        <div class="hero-wash" aria-hidden="true"></div>
+
+        <div class="hero-wordmark">
+          <h1 class="hero-title" id="hero-title">LA CALABAZA</h1>
+        </div>
+
+        <div class="hero-copy reveal">
+          <div class="hero-kicker-row">
+            <p class="eyebrow">The meme that won’t stop dancing</p>
+            <p class="hero-ca"><span>CA:</span> <strong data-config="contractAddress">SOON</strong></p>
+          </div>
+          <p class="hero-lede" aria-label="Three kittens. One beat. Zero explanation.">Three kittens. One beat.<br>Zero explanation.</p>
+          <div class="hero-meta">
+            <span class="network-pill"><i aria-hidden="true"></i>BUILT FOR BNB CHAIN</span>
+          </div>
+          <div class="hero-actions">
+            <button class="button button-primary" id="dance-toggle" type="button" aria-pressed="false">
+              <span class="play-icon" aria-hidden="true">▶</span>
+              <span class="dance-label">Join the dance</span>
+            </button>
+            <a class="button button-ghost pending-action" href="#pending-actions" data-pending="true" aria-disabled="true" data-pending-message="The official chart link is not available yet.">
+              View chart <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+
+        <p class="hero-note hero-note--left" aria-hidden="true">CATS<br>MAKE A<br>BETTER WORLD ♡</p>
+
+        <aside class="beat-panel" aria-label="Dance tempo and motion controls">
+          <button class="beat-mode-toggle" id="motion-toggle" type="button" aria-pressed="false" aria-label="Pause decorative motion">
+            <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M10 19 17 9l7 8 7-8 7 10v14c0 5-6 9-14 9S10 38 10 33V19Z"/><path d="M16 25h5M27 25h5M21 33c2 2 4 2 6 0"/></svg>
+            <span class="sr-only motion-label">Pause motion</span>
+          </button>
+          <p class="beat-note" aria-label="GOOD CATS BRIGHTER DAYS">GOOD<br>CATS<br>BRIGHTER<br>DAYS ♡</p>
+          <span class="beat-bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+          <strong>128</strong>
+          <span>BPM</span>
+          <i class="beat-rule" aria-hidden="true"></i>
+          <p class="beat-footer" aria-label="DANCE TOGETHER ALWAYS">DANCE<br>TOGETHER<br>ALWAYS ♡</p>
+        </aside>
+
+        <div class="ticker" aria-hidden="true">
+          <div class="ticker-track">
+            <span>MEOW</span><b>•</b><span>DANCE</span><b>•</b><span>REPEAT</span><b>•</b><span>$CALABAZA</span><b>•</b><span>BNB CHAIN</span><b>•</b>
+            <span>MEOW</span><b>•</b><span>DANCE</span><b>•</b><span>REPEAT</span><b>•</b><span>$CALABAZA</span><b>•</b><span>BNB CHAIN</span><b>•</b>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cats-section hero-character-strip" id="cats" aria-labelledby="cats-title">
+      <h2 class="sr-only" id="cats-title">Meet the three LA CALABAZA kittens</h2>
+      <div class="container hero-character-wrap">
+        <div class="hero-character-grid">
+          <article class="character-card character-card--shy reveal">
+            <div class="character-copy"><h3>The Shy One</h3><p>Sweet moves.<br>Big energy.</p></div>
+            <img class="character-portrait character-portrait--face" src="./assets/character-shy-face.png" width="1052" height="780" loading="lazy" alt="Orange folded-ear kitten known as The Shy One">
+            <span class="character-mark character-mark--spark" aria-hidden="true">✦</span>
+            <a class="character-arrow" href="#trend" aria-label="Read about The Shy One">→</a>
+          </article>
+          <article class="character-card character-card--drama reveal">
+            <div class="character-copy"><h3>The Drama</h3><p>So much feeling.<br>Zero filters.</p></div>
+            <img class="character-portrait character-portrait--face" src="./assets/character-drama-hat-face.png" width="1052" height="780" loading="lazy" alt="Fluffy white and gray kitten with a black wide-brim hat known as The Drama">
+            <span class="character-mark character-mark--bolt" aria-hidden="true">ϟ</span>
+            <a class="character-arrow" href="#trend" aria-label="Read about The Drama">→</a>
+          </article>
+          <article class="character-card character-card--brain reveal">
+            <div class="character-copy"><h3>The Brain</h3><p>Smart enough<br>to dance.</p></div>
+            <img class="character-portrait character-portrait--face" src="./assets/character-brain-face.png" width="1052" height="780" loading="lazy" alt="White and charcoal kitten with round glasses known as The Brain">
+            <span class="character-mark character-mark--crown" aria-hidden="true">♕</span>
+            <a class="character-arrow" href="#trend" aria-label="Read about The Brain">→</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="story-section" id="trend" aria-labelledby="story-title">
+      <figure class="story-art">
+        <img src="./assets/story-kittens-stage.png" width="1672" height="941" loading="lazy" alt="Fan-art illustration of the three LA CALABAZA kittens dancing on a wet night street, with The Drama wearing a black hat and The Brain wearing round glasses">
+        <figcaption><span>01</span> Three tiny headliners. One impossible-to-ignore formation.</figcaption>
+        <i class="story-orbit" aria-hidden="true"></i>
+      </figure>
+
+      <div class="container story-grid">
+        <div class="story-content reveal">
+          <p class="section-index">01 / THE STORY</p>
+          <h2 id="story-title" aria-label="HOW THREE KITTENS TOOK OVER THE INTERNET">HOW THREE KITTENS<br><em>TOOK OVER</em><br>THE INTERNET</h2>
+          <p class="story-summary">On June 28, 2026, <a class="story-author" href="https://www.tiktok.com/@meowtakeover" target="_blank" rel="noreferrer">@meowtakeover</a>—an account built around AI cats dancing in sync—posted the original three-kitten routine. It became a breakout hit because the trio was readable in a second: three distinct faces, one tight loop and perfectly synchronized movement. As it spread, the kittens became a reusable format for green-screen edits, remixes and recreations. <strong>LA CALABAZA</strong> continues that remix story with the same tiny headliners, a new beat and another stage.</p>
+          <ol class="story-notes">
+            <li><span>01</span><strong>The sound</strong><small>A hook built to loop.</small></li>
+            <li><span>02</span><strong>The trio</strong><small>Three faces, instant character.</small></li>
+            <li><span>03</span><strong>The remix</strong><small>Any place becomes a stage.</small></li>
+          </ol>
+          <div class="story-sources" aria-label="Sources">
+            <a href="https://www.tiktok.com/@meowtakeover/video/7678841126555553042" target="_blank" rel="noreferrer">Source 01 ↗</a>
+            <a href="https://knowyourmeme.com/memes/three-kittens-dancing-the-dark-triad" target="_blank" rel="noreferrer">Source 02 ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="viral-section" id="memes" aria-labelledby="viral-title">
+      <div class="container viral-grid">
+        <div class="viral-lead reveal">
+          <p class="section-index">WHY VIRAL</p>
+          <h2 class="viral-title" id="viral-title" aria-label="CUTE. STRANGE. INSTANTLY REMIXABLE.">CUTE. STRANGE.<br><em>INSTANTLY REMIXABLE.</em></h2>
+        </div>
+        <div class="viral-reasons">
+          <article class="viral-reason reveal"><span aria-hidden="true">♪</span><div><h3>A sticky hook</h3><p>Easy to remember.</p></div></article>
+          <article class="viral-reason reveal"><span aria-hidden="true">◇</span><div><h3>Three iconic faces</h3><p>Easy to recognize.</p></div></article>
+          <article class="viral-reason reveal"><span aria-hidden="true">↻</span><div><h3>Built for remixes</h3><p>Easy to recreate.</p></div></article>
+          <div class="viral-wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        </div>
+        <p class="viral-scribble" aria-hidden="true">MEOW<br>MAKES A<br>BETTER WORLD ♡</p>
+      </div>
+    </section>
+
+    <section class="videos-section" id="videos" aria-labelledby="videos-title">
+      <div class="container videos-layout">
+        <header class="videos-heading reveal">
+          <p class="section-index">02 / THE VIDEOS</p>
+          <h2 id="videos-title" aria-label="THE INTERNET KEEPS DANCING">THE INTERNET<br><em>KEEPS DANCING</em></h2>
+          <p class="videos-note" aria-hidden="true">DIFFERENT<br>PLACES<br>SAME VIBE ♡</p>
+        </header>
+
+        <div class="video-grid">
+          <article class="video-card reveal">
+            <video class="video-media" src="./assets/video-01.mp4" width="576" height="1024" controls playsinline preload="metadata" poster="./assets/tiktok-poster-01.png" aria-label="Play the original @meowtakeover three-kitten video"></video>
+            <a class="video-number video-source-link" href="https://www.tiktok.com/@meowtakeover/video/7678841126555553042" target="_blank" rel="noreferrer" aria-label="Open the original @meowtakeover post on TikTok">ORIGINAL · @MEOWTAKEOVER ↗</a>
+          </article>
+          <article class="video-card reveal">
+            <video class="video-media" src="./assets/video-02.mp4" width="576" height="1024" controls playsinline preload="metadata" poster="./assets/tiktok-poster-02.png" aria-label="Play LA CALABAZA video 02"></video>
+            <span class="video-number">VIDEO 02</span>
+          </article>
+          <article class="video-card reveal">
+            <video class="video-media" src="./assets/video-03.mp4" width="576" height="1024" controls playsinline preload="metadata" poster="./assets/tiktok-poster-03.png" aria-label="Play LA CALABAZA video 03"></video>
+            <span class="video-number">VIDEO 03</span>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer launch-footer" id="how-to-buy">
+    <div class="container launch-layout">
+      <div class="footer-wordmark" aria-hidden="true"><span>LA</span><span>CALABAZA</span></div>
+      <div class="launch-info">
+        <p class="section-index dark-index">THE DANCE NEVER ENDS</p>
+        <h2>BORN TO DANCE ON BNB CHAIN.</h2>
+        <span class="footer-network"><i aria-hidden="true"></i>BUILT FOR BNB CHAIN</span>
+        <div class="launch-actions" id="pending-actions">
+          <div class="footer-contract" id="contract-status"><span>CA:</span><strong data-config="contractAddress">SOON</strong><button type="button" data-copy-contract disabled>Copy</button></div>
+          <a class="launch-buy pending-action" data-link="buy" data-pending="true" aria-disabled="true" data-pending-message="The official DEX link will appear after the contract is verified.">Buy $CALABAZA ↗</a>
+        </div>
+        <p class="launch-disclaimer">No wallet connection. Always verify the official contract before using any third-party service.</p>
+        <div class="launch-links">
+          <nav aria-label="Footer navigation"><a href="#trend">The trend</a><a href="#cats">The cats</a><a href="#videos">The videos</a><a href="#memes">Memes</a></nav>
+          <nav aria-label="Social links">
+            <a class="pending-action" data-link="x" data-pending="true" aria-disabled="true" data-pending-message="The official X profile is coming soon.">X ↗</a>
+            <a href="https://www.tiktok.com/@meowtakeover/video/7678841126555553042" target="_blank" rel="noreferrer">TikTok ↗</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom"><p>For entertainment only. Always verify the contract address.</p><p>© 2026 LA CALABAZA</p></div>
+  </footer>
+
+  <p class="sr-only" id="visual-status" role="status" aria-live="polite"></p>
+</body>
+</html>

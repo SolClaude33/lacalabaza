@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">LA CALABAZA</title>
+  <rect width="64" height="64" rx="14" fill="#11080f"/>
+  <circle cx="32" cy="33" r="23" fill="#ff6a00"/>
+  <path d="M17 27 23 16l9 9 9-9 6 11v13c0 7-6 12-15 12S17 47 17 40V27Z" fill="#fff4de" stroke="#11080f" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M24 34h5m6 0h5m-12 9c3 2 5 2 8 0" fill="none" stroke="#11080f" stroke-width="3" stroke-linecap="round"/>
+  <rect x="29" y="6" width="6" height="10" rx="3" fill="#f3ba2f"/>
+</svg>

@@ -1,0 +1,20 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+__pycache__/
+*.py[cod]
+
+# Local design history and browser QA artifacts are not runtime source.
+qa/
+design/
+PROJECT_CONCEPT.md
+
+# Superseded raw generations; the optimized face assets are kept.
+assets/character-shy-card.png
+assets/character-drama-card.png
+assets/character-drama-face.png
+assets/character-brain-card.png

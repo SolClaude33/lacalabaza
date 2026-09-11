@@ -1,0 +1,221 @@
+{
+  "project": "LA CALABAZA",
+  "provider": "openai-codex",
+  "model": "gpt-image-2-medium",
+  "assets": [
+    {
+      "file": "hero-kittens.png",
+      "role": "default static hero with kittens",
+      "dimensions": [1672, 940],
+      "orientation": "landscape",
+      "origin": "from-scratch-image-generation-with-reference",
+      "usesConceptPixels": false,
+      "sha256": "6d484aba39a3472a169d34d3171707f00d279074cc901410f6ad7a3a3130893c"
+    },
+    {
+      "file": "hero-background.png",
+      "role": "hero background plate without foreground kittens",
+      "dimensions": [1672, 940],
+      "orientation": "landscape",
+      "alpha": false,
+      "origin": "reference-guided-background-reconstruction",
+      "sourceReferences": ["hero-kittens.png"],
+      "usesConceptPixels": false,
+      "sha256": "594e9bea259999341c845f918cee8d07d44707514e9a717119742734092f28ff"
+    },
+    {
+      "file": "hero-dance-poster.png",
+      "role": "transparent hero dance poster frame",
+      "dimensions": [1672, 940],
+      "orientation": "landscape",
+      "alpha": true,
+      "origin": "chroma-keyed-from-user-video",
+      "source": "2026-09-11 16-45-29.mp4",
+      "transform": "crop 554x620 at 694,340; RGB colorkey #84EB44 similarity 0.13 blend 0.03; despill; scale 840x940; transparent pad 1672x940",
+      "keySettings": {
+        "method": "RGB colorkey",
+        "color": "#84EB44",
+        "similarity": 0.13,
+        "blend": 0.03
+      },
+      "sha256": "2a4f01770cb3d13cdd1f5e19f380dc78c9ff532704d3c39845f4f3b26f68b2a1"
+    },
+    {
+      "file": "hero-dance-alpha.webm",
+      "role": "transparent interactive hero dance video",
+      "dimensions": [1672, 940],
+      "orientation": "landscape",
+      "durationSeconds": 13.362,
+      "frameRate": 30,
+      "alpha": true,
+      "videoCodec": "VP9",
+      "audioCodec": "Opus",
+      "origin": "chroma-keyed-and-web-encoded-from-user-video",
+      "source": "2026-09-11 16-45-29.mp4",
+      "transform": "crop 554x620 at 694,340; RGB colorkey #84EB44 similarity 0.13 blend 0.03; despill; scale 840x940; transparent pad 1672x940",
+      "keySettings": {
+        "method": "RGB colorkey",
+        "color": "#84EB44",
+        "similarity": 0.13,
+        "blend": 0.03
+      },
+      "sha256": "aa4af097e07f221170830a6ebe30362d5f3a93a20f34bc9b67d389805870fd94"
+    },
+    {
+      "file": "tiktok-poster-01.png",
+      "role": "poster from the original @meowtakeover three-kitten post",
+      "dimensions": [576, 1024],
+      "orientation": "portrait",
+      "origin": "frame-extracted-from-user-video",
+      "source": "Download (3).mp4",
+      "creator": "@meowtakeover",
+      "sourceUrl": "https://www.tiktok.com/@meowtakeover/video/7678841126555553042",
+      "sha256": "bdef3396e37cf99c4f18dabb055e065c056d5e5b33608de36915e0ceb37ce369"
+    },
+    {
+      "file": "tiktok-poster-02.png",
+      "role": "poster extracted from local video 02",
+      "dimensions": [576, 1024],
+      "orientation": "portrait",
+      "origin": "frame-extracted-from-user-video",
+      "source": "Download (1).mp4",
+      "sha256": "9f9ddfe7e71a8fbd103c49f139324e3de4359d4285a4b4f15195ca8a1199b175"
+    },
+    {
+      "file": "tiktok-poster-03.png",
+      "role": "poster extracted from local video 03",
+      "dimensions": [576, 1024],
+      "orientation": "portrait",
+      "origin": "frame-extracted-from-user-video",
+      "source": "Download (2).mp4",
+      "sha256": "26257e38583dd266ef3b9287f510f9a069a5ce34ddd5028012751798fd8b3177"
+    },
+    {
+      "file": "video-01.mp4",
+      "role": "original @meowtakeover three-kitten vertical dance video",
+      "dimensions": [576, 1024],
+      "orientation": "portrait",
+      "durationSeconds": 14.0,
+      "videoCodec": "H.264",
+      "audioCodec": "AAC",
+      "origin": "faststart-remux-from-user-video",
+      "source": "Download (3).mp4",
+      "creator": "@meowtakeover",
+      "sourceUrl": "https://www.tiktok.com/@meowtakeover/video/7678841126555553042",
+      "sha256": "4353a73184875aa943e77a9ddfdde722d4d66dcb5e79e03740863b87c6edf16d"
+    },
+    {
+      "file": "video-02.mp4",
+      "role": "local vertical dance video 02",
+      "dimensions": [576, 1024],
+      "orientation": "portrait",
+      "durationSeconds": 16.164,
+      "videoCodec": "H.264",
+      "audioCodec": "AAC",
+      "origin": "faststart-remux-from-user-video",
+      "source": "Download (1).mp4",
+      "sha256": "a8a8737362d2dce8b9625531cdd3680a7fb435a0b6d732864de6b02f5ebda052"
+    },
+    {
+      "file": "video-03.mp4",
+      "role": "local vertical dance video 03",
+      "dimensions": [576, 1024],
+      "orientation": "portrait",
+      "durationSeconds": 17.088,
+      "videoCodec": "H.264",
+      "audioCodec": "AAC",
+      "origin": "faststart-remux-from-user-video",
+      "source": "Download (2).mp4",
+      "sha256": "f516fe624bf4249226a89785eff8067ee0fb8c087541219ca35b666af1b60fd7"
+    },
+    {
+      "file": "character-shy-card.png",
+      "role": "transparent character portrait — The Shy One",
+      "dimensions": [1672, 941],
+      "orientation": "landscape",
+      "alpha": true,
+      "origin": "reference-guided-generation-on-controlled-chroma-plate",
+      "usesConceptPixels": false,
+      "sha256": "afa24923a6888671fdd569614c07629ccc80c61e4f25fb2152d75e085dd8f74b"
+    },
+    {
+      "file": "character-drama-card.png",
+      "role": "transparent character portrait — The Drama",
+      "dimensions": [1672, 941],
+      "orientation": "landscape",
+      "alpha": true,
+      "origin": "reference-guided-generation-on-controlled-chroma-plate",
+      "usesConceptPixels": false,
+      "sha256": "bc04f5de46f47341c6ac232486430e7a222b50b8b32bf0d03a417572e6d39c98"
+    },
+    {
+      "file": "character-brain-card.png",
+      "role": "transparent character portrait — The Brain",
+      "dimensions": [1672, 941],
+      "orientation": "landscape",
+      "alpha": true,
+      "origin": "reference-guided-generation-on-controlled-chroma-plate",
+      "usesConceptPixels": false,
+      "sha256": "65c58f20a83f94af1537934b2fdfb201c261178975e86c28f775272dc24bcd10"
+    },
+    {
+      "file": "character-shy-face.png",
+      "role": "transparent face crop for card — The Shy One",
+      "dimensions": [1052, 780],
+      "orientation": "landscape",
+      "alpha": true,
+      "origin": "crop-from-approved-transparent-character-source",
+      "source": "character-shy-card.png",
+      "crop": [620, 0, 1672, 780],
+      "usesConceptPixels": false,
+      "sha256": "dbadd3650160c6d6564ea573dcde52b3743c2936d81d36586a2682f4761ba7d0"
+    },
+    {
+      "file": "character-drama-face.png",
+      "role": "transparent face crop for card — The Drama",
+      "dimensions": [1052, 780],
+      "orientation": "landscape",
+      "alpha": true,
+      "origin": "crop-from-approved-transparent-character-source",
+      "source": "character-drama-card.png",
+      "crop": [620, 0, 1672, 780],
+      "usesConceptPixels": false,
+      "sha256": "b572347ea97117a10f800cc0b4bb76b58751e531c57e16778488ed9739250059"
+    },
+    {
+      "file": "character-drama-hat-face.png",
+      "role": "transparent face crop with signature black hat — The Drama",
+      "dimensions": [1052, 780],
+      "orientation": "landscape",
+      "alpha": true,
+      "origin": "reference-guided-generation-on-controlled-green-plate",
+      "sourceReferences": ["character-drama-face.png", "hero-kittens.png"],
+      "crop": [620, 0, 1672, 780],
+      "usesConceptPixels": false,
+      "sha256": "cd786185407f456d5946b61b5f8e60dc72a7d29059bab207ad660f72f3f3d729"
+    },
+    {
+      "file": "character-brain-face.png",
+      "role": "transparent face crop for card — The Brain",
+      "dimensions": [1052, 780],
+      "orientation": "landscape",
+      "alpha": true,
+      "origin": "crop-from-approved-transparent-character-source",
+      "source": "character-brain-card.png",
+      "crop": [620, 0, 1672, 780],
+      "usesConceptPixels": false,
+      "sha256": "57f3da6f9266902806f2488e4e0cea95632414931e9396727db4e8d66f7a1aad"
+    },
+    {
+      "file": "story-kittens-stage.png",
+      "role": "story section fan-art — wet night street dance",
+      "dimensions": [1672, 941],
+      "orientation": "landscape",
+      "alpha": false,
+      "origin": "reference-guided-fan-art-adaptation",
+      "sourceReferences": ["hero-kittens.png", "approved prior story fan-art composition"],
+      "usesConceptPixels": false,
+      "sha256": "ba927343bfe96c77520f1bcce514ffc759b38e99382a6d5263fe693d11e17c52"
+    }
+  ]
+}

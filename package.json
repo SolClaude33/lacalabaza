@@ -1,0 +1,15 @@
+{
+  "name": "la-calabaza",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test:python": "python -m unittest discover -s tests -v",
+    "test:node": "node --test tests/build.test.mjs tests/build_helpers.test.mjs tests/public_config.test.mjs",
+    "test": "npm run test:python && npm run test:node",
+    "build": "node scripts/build.mjs",
+    "verify": "npm test && npm run build"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
