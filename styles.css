@@ -194,7 +194,8 @@
   .beat-bars i:nth-child(4) { height: 100%; }
   .beat-rule { width: 3.2rem; height: 1px; margin-top: 1.1rem; background: rgba(255,244,222,.55); }
   .ticker { position: absolute; z-index: 9; bottom: 0; left: 0; right: 0; height: 2.35rem; overflow: hidden; border-block: 1px solid rgba(223,255,50,.5); background: rgba(9,6,10,.96); color: var(--lime); }
-  .ticker-track { display: flex; align-items: center; gap: 1.35rem; width: max-content; height: 100%; padding-inline: 1.35rem; font-family: var(--sans); font-size: .78rem; font-weight: 900; letter-spacing: .035em; animation: ticker 20s linear infinite; }
+  .ticker-track { display: flex; width: max-content; height: 100%; font-family: var(--sans); font-size: .78rem; font-weight: 900; letter-spacing: .035em; white-space: nowrap; animation: ticker 56s linear infinite; will-change: transform; }
+  .ticker-sequence { display: flex; flex: 0 0 auto; align-items: center; justify-content: space-around; gap: 1.35rem; min-width: 100vw; padding-inline: 1.35rem; }
   .ticker-track b { font-size: .55rem; }
 
   .cats-section { background: var(--ink); }
@@ -294,11 +295,10 @@
   .footer-contract strong { overflow: hidden; font-family: var(--mono); font-size: .64rem; font-weight: 500; text-overflow: ellipsis; white-space: nowrap; }
   .footer-contract button { min-height: 1.8rem; padding-inline: .6rem; border: 1px solid rgba(17,8,15,.45); background: transparent; color: rgba(17,8,15,.55); font-family: var(--mono); font-size: .52rem; text-transform: uppercase; }
   .launch-buy { display: inline-flex; align-items: center; justify-content: center; min-height: 2.7rem; padding-inline: 1rem; border: 1px solid var(--ink); background: var(--ink); color: var(--cream); font-family: var(--mono); font-size: .58rem; font-weight: 700; letter-spacing: .04em; text-decoration: none; text-transform: uppercase; }
-  .launch-disclaimer { margin-top: .45rem; font-size: .64rem; line-height: 1.3; }
   .launch-links { display: flex; justify-content: space-between; gap: 1.2rem; margin-top: .75rem; padding-top: .65rem; border-top: 1px solid rgba(17,8,15,.35); }
   .launch-links nav { display: flex; flex-wrap: wrap; gap: .85rem; }
   .launch-links a { font-family: var(--mono); font-size: .54rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; text-underline-offset: .25rem; }
-  .footer-bottom { display: flex; justify-content: space-between; gap: 2rem; padding-block: .7rem; border-top: 0; font-family: var(--mono); font-size: .55rem; letter-spacing: .04em; text-transform: uppercase; }
+  .footer-bottom { display: flex; justify-content: flex-end; gap: 2rem; padding-block: .7rem; border-top: 0; font-family: var(--mono); font-size: .55rem; letter-spacing: .04em; text-transform: uppercase; }
 }
 
 @layer components {
@@ -314,7 +314,7 @@
 }
 
 @layer motion {
-  @keyframes ticker { to { transform: translateX(-50%); } }
+  @keyframes ticker { to { transform: translate3d(-50%, 0, 0); } }
   @keyframes beat { 0%, 100% { transform: scaleY(.35); } 50% { transform: scaleY(1); } }
   @keyframes story-drift { from { transform: scale(1.02); } to { transform: scale(1.08) translate3d(0, -1%, 0); } }
 

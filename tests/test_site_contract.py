@@ -162,6 +162,25 @@ class LaCalabazaContract(unittest.TestCase):
         self.assertIn(".motion-paused .ticker-track", self.css)
         self.assertNotIn("autoplay", self.html.lower())
 
+    def test_ticker_uses_two_complete_sequences_for_a_gapless_loop(self) -> None:
+        sequences = re.findall(
+            r'<div class="ticker-sequence">([\s\S]*?)</div>',
+            self.html,
+        )
+        self.assertEqual(len(sequences), 2)
+        normalized = [re.sub(r"\s+", "", sequence) for sequence in sequences]
+        self.assertEqual(normalized[0], normalized[1])
+        for phrase in ("MEOW", "DANCE", "REPEAT", "$CALABAZA", "BNB CHAIN"):
+            self.assertGreaterEqual(sequences[0].count(f"<span>{phrase}</span>"), 3)
+        self.assertRegex(
+            self.css,
+            r"\.ticker-sequence\s*\{[^}]*flex:\s*0\s+0\s+auto[^}]*min-width:\s*100vw",
+        )
+        self.assertRegex(
+            self.css,
+            r"@keyframes ticker\s*\{[^}]*translate3d\(-50%,\s*0,\s*0\)",
+        )
+
     def test_reference_hero_fits_viewport_without_clipped_cat_layers(self) -> None:
         self.assertRegex(self.html, r'<h1\b[^>]*id="hero-title"[^>]*>\s*LA CALABAZA\s*</h1>')
         self.assertIn('class="hero-stage"', self.html)
@@ -348,6 +367,15 @@ class LaCalabazaContract(unittest.TestCase):
         self.assertRegex(mobile_css, r"\.launch-actions\s*\{[^}]*display:\s*flex")
         self.assertRegex(mobile_css, r"\.footer-contract\s*\{[^}]*flex:\s*1\s+1\s+0")
         self.assertRegex(mobile_css, r"\.footer-contract button\s*\{[^}]*display:\s*none")
+
+    def test_requested_footer_disclaimers_are_removed(self) -> None:
+        self.assertNotIn(
+            "No wallet connection. Always verify the official contract before using any third-party service.",
+            self.html,
+        )
+        self.assertNotIn("For entertainment only. Always verify the contract address.", self.html)
+        self.assertNotIn("launch-disclaimer", self.html)
+        self.assertNotIn(".launch-disclaimer", self.css)
 
     def test_mobile_navigation_and_memes_destinations_exist(self) -> None:
         self.assertIn('id="mobile-nav-toggle"', self.html)
